@@ -28,5 +28,10 @@ movie.destroy
 movie.to_json
 end
 
+# METHOD REQUEST
 
+get '/movies/movie/director' do
+by_director = Movie.by_director
+by_director.to_json
+end
 end
