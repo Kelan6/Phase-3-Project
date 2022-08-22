@@ -1,10 +1,13 @@
 puts "🌱 Seeding spices..."
 
+#users
+
 User.create(is_critic: "true", username: "Photius", password: "Flatiron1")
 User.create(is_critic: "true", username: "Almickle", password: "alanine")
 User.create(is_critic: "false", username: "CTDN", password: "memphisfoo")
 User.create(is_critic: "false", username: "User", password: "password")
 
+#movies - michael
 Movie.create(title: "Inception", thumbnail_url: "https://www.imdb.com/title/tt1375666/mediaviewer/rm3426651392/?ref_=tt_ov_i", director: "Christopher Nolan", budget: 160.0, box_office: 836.8, description: nil)
 Movie.create(title: "Avatar", thumbnail_url: "https://en.wikipedia.org/wiki/File:Avatar_(2009_film)_poster.jpg", director: "James Cameron", budget: 237.0, box_office: 2847.0, description: nil)
 Movie.create(title: "Phantom Menace", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/40/Star_Wars_Phantom_Menace_poster.jpg/220px-Star_Wars_Phantom_Menace_poster.jpg", director: "George Lucas", budget: 115.0, box_office: 1027.0, description: nil)
@@ -19,6 +22,7 @@ Movie.create(title: "Wolf of Wall Street", thumbnail_url: "https://upload.wikime
 Movie.create(title: "Taken", thumbnail_url: "https://en.wikipedia.org/wiki/File:Taken_film_poster.jpg", budget: 25.0, box_office: 226.8, description: nil)
 Movie.create(title: "Apocalypse Now", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/c/c2/Apocalypse_Now_poster.jpg", budget: 31.0, box_office: 150.0, description: nil)
 
+#movies - kelan
 Movie.create(title: "Tropic Thunder", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/d/d6/Tropic_thunder_ver3.jpg", director: "Ben Stiller", description: "Through a series of freak occurrences, a group of actors shooting a big-budget war movie are forced to become the soldiers they are portraying.", budget: 92.0, box_office: 195.7)
 Movie.create(title: "Tenet", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/1/14/Tenet_movie_poster.jpg", director: "Christopher Nolan", description: "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.", budget: 205.0, box_office: 365.3)
 Movie.create(title: "The Dark Knight", thumbnail_url: "https://en.wikipedia.org/wiki/File:The_Dark_Knight_(2008_film).jpg", director: "Christopher Nolan", description: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.", budget: 185.0, box_office: 1000.0)
@@ -30,6 +34,7 @@ Movie.create(title: "Water World", thumbnail_url: "https://upload.wikimedia.org/
 Movie.create(title: "Zoolander", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/7/7c/Movie_poster_zoolander.jpg", director: "Ben Stiller", description: "Derek and Hansel are lured into modelling again, in Rome, where they find themselves the target of a sinister conspiracy.", budget: 28.0, box_office: 60.8)
 Movie.create(title: "Talladega Nights: The Ballad of Ricky Bobby", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/e/e7/Talladega_nights.jpg", director: "Adam McKay", description: "Number one NASCAR driver Ricky Bobby stays atop the heap thanks to a pact with his best friend and teammate, Cal Naughton, Jr. But when a French Formula One driver, makes his way up the ladder, Ricky Bobby's talent and devotion are put to the test.", budget: 72.5, box_office: 163.4)
 
+#movies - christain
 Movie.create(title: "Step Brothers", thumbnail_url: "https://www.imdb.com/title/tt0838283/mediaviewer/rm3433645824/?ref_=tt_ov_i", director: "Adam McKay", description: "Two aimless middle-aged losers still living at home are forced against their will to become roommates when their parents marry.", budget: 65.0,  box_office: 128.1)
 Movie.create(title: "Stepmom", thumbnail_url: "https://www.imdb.com/title/tt0120686/mediaviewer/rm4215159296/?ref_=tt_ov_i", director: "Chris Columbus", description: "A terminally-ill woman must deal with her ex-husband's new lover, who will be their children's stepmother.", budget: 50.0,  box_office: 159.7)
 Movie.create(title: "Parasite", thumbnail_url: "https://www.imdb.com/title/tt6751668/mediaviewer/rm3194916865/?ref_=tt_ov_i", director: "Bong Joon Ho", description: "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.", budget: 15.5,  box_office: 263.1)
@@ -46,5 +51,12 @@ Movie.create(title: "A Quiet Place", thumbnail_url:"https://upload.wikimedia.org
 Movie.create(title: "Black Panther", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/d/d6/Black_Panther_%28film%29_poster.jpg", director: "Ryan Coogler", description: "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.", budget: 200.0,  box_office: 1034.8)
 Movie.create(title: "Don't Be a Menace to South Central While Drinking Your Juice in the Hood", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/f/fd/Dontbeamenace.jpg", director: "Paris Barclay", description: "A parody of several U.S. films about being in the 'Hood', for instance Boyz n the Hood (1991), South Central (1992), Menace II Society (1993), Higher Learning (1995) and Juice (1992).", budget: 3.8,  box_office: 20.1)
 
+
+reviewArray = ["Great movie!", "Funniest movie ever!", "So dark...", "This was fire", "I made my whole family watch this movie", "My wife left me after seeing this movie", "I can't believe this is still in theatres!", "Best movie of all time", "Two thumbs up!", "Critics are dumb. Trust the audience. Fantastic movie.", "I gave it a standing a ovation", "This movie sucked", "I walked out. Don't go see this", "Very offensive"]
+y = reviewArray.length - 1
+
+38.times do |x| 
+    Review.create(score: rand(1..10), comment: reviewArray[rand(0..y)], user_id: rand(1..4), movie_id: rand(1..38))
+end
 
 puts "✅ Done seeding!"
