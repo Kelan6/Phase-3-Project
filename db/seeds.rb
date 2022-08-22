@@ -1,11 +1,11 @@
 puts "🌱 Seeding spices..."
 
 #users
-
 User.create(is_critic: "true", username: "Photius", password: "Flatiron1")
 User.create(is_critic: "true", username: "Almickle", password: "alanine")
 User.create(is_critic: "false", username: "CTDN", password: "memphisfoo")
-User.create(is_critic: "false", username: "User", password: "password")
+User.create(is_critic: "false", username: "Karen", password: "password")
+
 
 #movies - michael
 Movie.create(title: "Inception", thumbnail_url: "https://www.imdb.com/title/tt1375666/mediaviewer/rm3426651392/?ref_=tt_ov_i", director: "Christopher Nolan", budget: 160.0, box_office: 836.8, description: nil)
@@ -52,6 +52,7 @@ Movie.create(title: "Black Panther", thumbnail_url: "https://upload.wikimedia.or
 Movie.create(title: "Don't Be a Menace to South Central While Drinking Your Juice in the Hood", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/f/fd/Dontbeamenace.jpg", director: "Paris Barclay", description: "A parody of several U.S. films about being in the 'Hood', for instance Boyz n the Hood (1991), South Central (1992), Menace II Society (1993), Higher Learning (1995) and Juice (1992).", budget: 3.8,  box_office: 20.1)
 
 
+#reviews
 reviewArray = ["Great movie!", "Funniest movie ever!", "So dark...", "This was fire", "I made my whole family watch this movie", "My wife left me after seeing this movie", "I can't believe this is still in theatres!", "Best movie of all time", "Two thumbs up!", "Critics are dumb. Trust the audience. Fantastic movie.", "I gave it a standing a ovation", "This movie sucked", "I walked out. Don't go see this", "Very offensive"]
 y = reviewArray.length - 1
 
