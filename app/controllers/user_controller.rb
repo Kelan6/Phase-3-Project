@@ -22,7 +22,11 @@ user.update(is_critic: params[:is_critic], username: params[:username], password
 user.to_json
 end
 
-
+delete "/users/:id" do
+  user = User.find(params[:id])
+  user.destroy
+  user.to_json
+end
 
 
 
