@@ -34,6 +34,6 @@ get "/reviews" do
     sort_by_score.to_json
   end
 
-  end
+
 
 end
