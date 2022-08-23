@@ -3,8 +3,8 @@ class Review < ActiveRecord::Base
     belongs_to :user
 
 
-def self.sort_by_score
-    all.order(score: :desc)
+def self.by_score
+    order(score: :desc)
 end
 
 

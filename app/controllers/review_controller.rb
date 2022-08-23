@@ -29,9 +29,9 @@ get "/reviews" do
 
   # Method request
 
-  get 'reviews/review/score' do
-    sort_by_score = Review.sort_by_score
-    sort_by_score.to_json
+  get '/reviews/review/score' do
+    by_score = Review.by_score
+    by_score.to_json
   end
 
 
