@@ -8,8 +8,8 @@ User.create(is_critic: "false", username: "Karen", password: "password")
 
 
 #movies - michael
-Movie.create(title: "Inception", thumbnail_url: "https://www.imdb.com/title/tt1375666/mediaviewer/rm3426651392/?ref_=tt_ov_i", director: "Christopher Nolan", budget: 160.0, box_office: 836.8, description: nil)
-Movie.create(title: "Avatar", thumbnail_url: "https://en.wikipedia.org/wiki/File:Avatar_(2009_film)_poster.jpg", director: "James Cameron", budget: 237.0, box_office: 2847.0, description: nil)
+Movie.create(title: "Inception", thumbnail_url: "https://th.bing.com/th/id/R.35072388899348650e7f6d7b322cff5d?rik=LOcfHdW%2bnTU7RA&riu=http%3a%2f%2fwww.imfdb.org%2fimages%2fthumb%2f9%2f91%2fInception_poster.jpg%2f405px-Inception_poster.jpg&ehk=yToRDzLt42OVbE%2f%2f4LvOsqlAMrrJ3VCbAuRMNngcvRA%3d&risl=&pid=ImgRaw&r=0", director: "Christopher Nolan", budget: 160.0, box_office: 836.8, description: nil)
+Movie.create(title: "Avatar", thumbnail_url: "https://th.bing.com/th/id/R.2bc65b280e714cdda50cae397ba574f9?rik=cbM0VAz9tHQTKw&riu=http%3a%2f%2f1.bp.blogspot.com%2f_KIU4QaKZDps%2fTOwDHqDLRnI%2fAAAAAAAAAFU%2fGafWBNV-3RY%2fs1600%2fAvatar_DVD.jpg&ehk=0uT2hMrAaKrFce070UTPBzuiSeZMq6jV2IVFV6IqYSs%3d&risl=&pid=ImgRaw&r=0", director: "James Cameron", budget: 237.0, box_office: 2847.0, description: nil)
 Movie.create(title: "Phantom Menace", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/thumb/4/40/Star_Wars_Phantom_Menace_poster.jpg/220px-Star_Wars_Phantom_Menace_poster.jpg", director: "George Lucas", budget: 115.0, box_office: 1027.0, description: nil)
 Movie.create(title: "Nausicaä of the Valley of the Wind", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Nausicaaposter.jpg/220px-Nausicaaposter.jpg", director: "Hayao Miyazaki", budget: 0.758, box_office: 14.3, description: nil)
 Movie.create(title: "Gladiator", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Gladiator_%282000_film_poster%29.png/220px-Gladiator_%282000_film_poster%29.png", director: "Ridley Scott", budget: 103.0, box_office: 460.5, description: nil)
@@ -19,7 +19,7 @@ Movie.create(title: "Monster's Inc", thumbnail_url: "https://upload.wikimedia.or
 Movie.create(title: "Shrek", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/7/7b/Shrek_%282001_animated_feature_film%29.jpg", director: "Andrew Adamson", budget: 60.0, box_office: 487.9, description: nil)
 Movie.create(title: "Moonrise Kingdom", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/4/4f/Moonrise_Kingdom_FilmPoster.jpeg", director: "Wes Anderson", budget: 16.0, box_office: 68.3, description: nil)
 Movie.create(title: "Wolf of Wall Street", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/The_Wolf_of_Wall_Street_%282013%29.png/220px-The_Wolf_of_Wall_Street_%282013%29.png", budget: 100.0, box_office: 392.0, description: nil)
-Movie.create(title: "Taken", thumbnail_url: "https://en.wikipedia.org/wiki/File:Taken_film_poster.jpg", budget: 25.0, box_office: 226.8, description: nil)
+Movie.create(title: "Taken", thumbnail_url: "https://cdn.hmv.com/r/w-1280/hmv/files/0a/0a6a593b-284f-4722-a44f-128abba36005.jpg", budget: 25.0, box_office: 226.8, description: nil)
 Movie.create(title: "Apocalypse Now", thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/c/c2/Apocalypse_Now_poster.jpg", budget: 31.0, box_office: 150.0, description: nil)
 
 #movies - kelan
