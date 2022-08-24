@@ -12,7 +12,8 @@ class ReviewController < ApplicationController
   end
 
   post "/reviews" do
-      reviews = Review.create(score: :score, comment: :comment, user_id: :user_id, movie_id: :movie_id, timestamps: :timestamps)
+      reviews = Review.create(score: params[:score], comment: params[:comment], user_id: params[:user_id], movie_id: params[:movie_id])
+      review.to_json
   end
 
   patch "/reviews/:id" do
