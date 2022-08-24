@@ -13,8 +13,12 @@ class MovieController < ApplicationController
       movies.to_json
   end
 
-  get "/movies/id/reviews/average_score" do
-    Movie.find(params[:id]).reviews
+  get "/movies/:id/reviews/scores" do
+    array = []
+    Movie.find(params[:id]).reviews.count.times do |x|
+        array << Movie.find(params[:id]).reviews[x].score
+    end
+    array.to_json
   end
 
 
