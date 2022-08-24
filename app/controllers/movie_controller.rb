@@ -17,21 +17,21 @@ post "/movies" do
 end
 
 patch "/movies/:id" do
-movie = Movie.find(params[:id])
-movie.update(box_office: params[:box_office])
-movie.to_json
+  movie = Movie.find(params[:id])
+  movie.update(box_office: params[:box_office])
+  movie.to_json
 end
 
 delete "/movies/:id" do
-movie = Movie.find(params[:id])
-movie.destroy
-movie.to_json
+  movie = Movie.find(params[:id])
+  movie.destroy
+  movie.to_json
 end
 
 # METHOD REQUEST
 
 get '/movies/movie/director' do
-by_director = Movie.by_director
-by_director.to_json
+  by_director = Movie.by_director
+  by_director.to_json
 end
 end
