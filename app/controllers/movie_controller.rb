@@ -1,9 +1,11 @@
 class MovieController < ApplicationController
 
   # MOVIE CRUD
+
+  #get
   get "/movies" do
       movies = Movie.all
-      movies.to_json
+      movies.to_json(include: :reviews)
   end
 
   get "/movies/:id" do
@@ -11,28 +13,29 @@ class MovieController < ApplicationController
       movies.to_json
   end
 
-  post "/movies" do
-      movies = Movie.create(title: params[:title], thumbnail_url: params[:thumbnail_url], director: params[:director], description: params[:description], budget: params[:budget], box_office: params[:box_office])
-      movies.to_json
+  get "/movies/id/reviews/average_score" do
+    Movie.find(params[:id]).reviews
   end
 
+
+  #post
+  post "/movies" do
+      newmovie = Movie.create(title: params[:title], thumbnail_url: params[:thumbnail_url], director: params[:director], description: params[:description], budget: params[:budget], box_office: params[:box_office])
+      newmovie.to_json
+  end
+
+  #patch
   patch "/movies/:id" do
       movie = Movie.find(params[:id])
       movie.update(box_office: params[:box_office])
       movie.to_json
   end
 
+  #delete
   delete "/movies/:id" do
       movie = Movie.find(params[:id])
       movie.destroy
       movie.to_json
-  end
-
-  # METHOD REQUEST
-
-  get '/movies/movie/director' do
-      by_director = Movie.by_director
-      by_director.to_json
   end
   
 end

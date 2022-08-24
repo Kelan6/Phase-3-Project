@@ -56,7 +56,7 @@ Movie.create(title: "Don't Be a Menace to South Central While Drinking Your Juic
 reviewArray = ["Great movie!", "Funniest movie ever!", "So dark...", "This was fire", "I made my whole family watch this movie", "My wife left me after seeing this movie", "I can't believe this is still in theatres!", "Best movie of all time", "Two thumbs up!", "Critics are dumb. Trust the audience. Fantastic movie.", "I gave it a standing a ovation", "This movie sucked", "I walked out. Don't go see this", "Very offensive"]
 y = reviewArray.length - 1
 
-38.times do |x| 
+2000.times do |x| 
     Review.create(score: rand(1..10), comment: reviewArray[rand(0..y)], user_id: rand(1..4), movie_id: rand(1..38))
 end
 
