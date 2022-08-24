@@ -34,6 +34,8 @@ get "/reviews" do
     by_score.to_json
   end
 
-
-
+  get '/reviews/movie/:id' do
+    review=Review.movie.find(params[:id])
+    review.to_json
+  end
 end
