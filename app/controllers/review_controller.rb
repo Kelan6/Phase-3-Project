@@ -38,4 +38,5 @@ class ReviewController < ApplicationController
     review=Review.movie.find(params[:id])
     review.to_json
   end
+  
 end
