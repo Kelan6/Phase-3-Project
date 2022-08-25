@@ -2,7 +2,7 @@ class ReviewController < ApplicationController
 
   # REVIEW CRUD
   get "/reviews" do
-      reviews = Review.all
+      reviews = Review.all.by_time
       reviews.to_json
   end
 

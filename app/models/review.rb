@@ -7,7 +7,8 @@ def self.by_score
     order(score: :desc)
 end
 
-
-
+def self.by_time
+    order(updated_at: :desc, created_at: :desc)
+end
 
 end
