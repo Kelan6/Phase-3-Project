@@ -17,3 +17,6 @@ Critic could leave a new review (POST)
 Critic could edit review already given after second watch (PATCH)
 
 Critic could delete review if they wanted (DELETE)
+
+lsof -wni tcp:9292
+kill -9 number
